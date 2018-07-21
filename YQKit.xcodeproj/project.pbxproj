@@ -14,6 +14,8 @@
 		2F1FE0A82102D66400ADBFB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F1FE0A62102D66400ADBFB6 /* LaunchScreen.storyboard */; };
 		2F1FE0B32102D66400ADBFB6 /* YQKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FE0B22102D66400ADBFB6 /* YQKitTests.swift */; };
 		2F1FE0BE2102D66400ADBFB6 /* YQKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FE0BD2102D66400ADBFB6 /* YQKitUITests.swift */; };
+		2F1FE0CE2102D70800ADBFB6 /* SlowlyShowTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FE0CD2102D70800ADBFB6 /* SlowlyShowTransition.swift */; };
+		2F1FE0D12102D7C800ADBFB6 /* SinglePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FE0D02102D7C800ADBFB6 /* SinglePickerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2F1FE0B92102D66400ADBFB6 /* YQKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F1FE0BD2102D66400ADBFB6 /* YQKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YQKitUITests.swift; sourceTree = "<group>"; };
 		2F1FE0BF2102D66400ADBFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F1FE0CD2102D70800ADBFB6 /* SlowlyShowTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowlyShowTransition.swift; sourceTree = "<group>"; };
+		2F1FE0D02102D7C800ADBFB6 /* SinglePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePickerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		2F1FE0912102D66300ADBFB6 = {
 			isa = PBXGroup;
 			children = (
+				2F1FE0CB2102D67600ADBFB6 /* src */,
 				2F1FE09C2102D66300ADBFB6 /* YQKit */,
 				2F1FE0B12102D66400ADBFB6 /* YQKitTests */,
 				2F1FE0BC2102D66400ADBFB6 /* YQKitUITests */,
@@ -123,6 +128,31 @@
 				2F1FE0BF2102D66400ADBFB6 /* Info.plist */,
 			);
 			path = YQKitUITests;
+			sourceTree = "<group>";
+		};
+		2F1FE0CB2102D67600ADBFB6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2F1FE0CF2102D7A200ADBFB6 /* Picker */,
+				2F1FE0CC2102D6A200ADBFB6 /* Transition */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2F1FE0CC2102D6A200ADBFB6 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				2F1FE0CD2102D70800ADBFB6 /* SlowlyShowTransition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		2F1FE0CF2102D7A200ADBFB6 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				2F1FE0D02102D7C800ADBFB6 /* SinglePickerController.swift */,
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1FE0CE2102D70800ADBFB6 /* SlowlyShowTransition.swift in Sources */,
 				2F1FE0A02102D66300ADBFB6 /* ViewController.swift in Sources */,
 				2F1FE09E2102D66300ADBFB6 /* AppDelegate.swift in Sources */,
+				2F1FE0D12102D7C800ADBFB6 /* SinglePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
