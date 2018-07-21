@@ -17,7 +17,7 @@ class SinglePickerController: UIViewController {
     fileprivate var selectIndex: Int = -1
     fileprivate var pickerTitle: String = ""
     
-    lazy var singlePickerView: SinglePickerView = {
+    private(set) lazy var singlePickerView: SinglePickerView = {
         let pickerV = SinglePickerView(pickerTitle:self.pickerTitle, dataSource: self.dataSource, selectIndex: self.selectIndex, stringForRow: self.stringForRowClosure)
         pickerV.cancelClosure = {[weak self] (_) in
             self?.dismiss(animated: true, completion: nil)
@@ -115,6 +115,8 @@ final class SinglePickerView: UIView {
     var cancelClosure: ((UIButton) -> Void)?
     var confirmClosure: ((_ sender: UIButton, _ value: Any, _ index: Int) -> Void)?
     var stringForRowClosure: ((Int) -> String)?
+    var titleSelectedColor: UIColor = UIColor.blue
+    var titleDeSelectedColor: UIColor = UIColor.black
     
     fileprivate var dataSource: [Any] = []
     fileprivate var selectIndex: Int = -1
@@ -129,7 +131,7 @@ final class SinglePickerView: UIView {
         createView()
     }
     
-    fileprivate lazy var cancelBtn: UIButton = {
+    private(set) lazy var cancelBtn: UIButton = {
         let btn = UIButton(type: .custom)
         btn.setTitle(NSLocalizedString("取消", comment: "取消"), for: .normal)
         btn.setTitleColor(UIColor.black, for: .normal)
@@ -140,7 +142,7 @@ final class SinglePickerView: UIView {
         return btn
     }()
     
-    fileprivate lazy var confirmBtn: UIButton = {
+    private(set) lazy var confirmBtn: UIButton = {
         let btn = UIButton(type: .custom)
         btn.setTitle(NSLocalizedString("确定", comment: "确定"), for: .normal)
         btn.setTitleColor(UIColor.blue, for: .normal)
@@ -151,7 +153,7 @@ final class SinglePickerView: UIView {
         return btn
     }()
     
-    fileprivate lazy var titleLabel: UILabel = {
+    private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 14)
@@ -245,9 +247,9 @@ extension SinglePickerView: UIPickerViewDataSource {
         pickerLabel.textAlignment = .center
         var color: UIColor!
         if pickerView.selectedRow(inComponent: component) == row {
-            color = UIColor.blue
+            color = titleSelectedColor
         } else {
-            color = UIColor.black
+            color = titleDeSelectedColor
         }
         pickerLabel.textColor = color
         var title = ""

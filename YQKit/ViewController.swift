@@ -22,9 +22,13 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let arr: [String] = ["1123", "324234", "123123"]
-        SinglePickerController(pickerTitle: "标题", dataSource: arr, selectIndex: 0) { (index) -> String in
+        let pickerVC = SinglePickerController(pickerTitle: "标题", dataSource: arr, selectIndex: 0) { (index) -> String in
             return arr[index]
-        }.showPickerView(for: self)
+        }
+        pickerVC.singlePickerView.titleSelectedColor = UIColor.red
+        pickerVC.singlePickerView.titleDeSelectedColor = UIColor.lightGray
+        pickerVC.singlePickerView.confirmBtn.setTitleColor(UIColor.green, for: .normal)
+        pickerVC.showPickerView(for: self)
     }
 
 
