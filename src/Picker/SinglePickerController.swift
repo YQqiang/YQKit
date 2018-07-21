@@ -17,8 +17,8 @@ class SinglePickerController: UIViewController {
     fileprivate var selectIndex: Int = -1
     fileprivate var pickerTitle: String = ""
     
-    lazy var singlePickerView: SGSinglePickerView = {
-        let pickerV = SGSinglePickerView(pickerTitle:self.pickerTitle, dataSource: self.dataSource, selectIndex: self.selectIndex, stringForRow: self.stringForRowClosure)
+    lazy var singlePickerView: SinglePickerView = {
+        let pickerV = SinglePickerView(pickerTitle:self.pickerTitle, dataSource: self.dataSource, selectIndex: self.selectIndex, stringForRow: self.stringForRowClosure)
         pickerV.cancelClosure = {[weak self] (_) in
             self?.dismiss(animated: true, completion: nil)
         }
@@ -110,7 +110,7 @@ class SinglePickerController: UIViewController {
     }
 }
 
-final class SGSinglePickerView: UIView {
+final class SinglePickerView: UIView {
     
     var cancelClosure: ((UIButton) -> Void)?
     var confirmClosure: ((_ sender: UIButton, _ value: Any, _ index: Int) -> Void)?
@@ -178,7 +178,7 @@ final class SGSinglePickerView: UIView {
     }
 }
 
-extension SGSinglePickerView {
+extension SinglePickerView {
     fileprivate func createView() {
         let superView = self
         superView.backgroundColor = UIColor.white
@@ -223,14 +223,14 @@ extension SGSinglePickerView {
 }
 
 // MARK: - UIPickerViewDelegate
-extension SGSinglePickerView: UIPickerViewDelegate {
+extension SinglePickerView: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerView.reloadAllComponents()
     }
 }
 
 // MARK: - UIPickerViewDataSource
-extension SGSinglePickerView: UIPickerViewDataSource {
+extension SinglePickerView: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -264,7 +264,7 @@ extension SGSinglePickerView: UIPickerViewDataSource {
 }
 
 // MARK: - private func
-extension SGSinglePickerView {
+extension SinglePickerView {
     @objc fileprivate func cancelAction(_ sender: UIButton) {
         if let closure = cancelClosure {
             closure(sender)
