@@ -16,6 +16,9 @@
 		2F1FE0BE2102D66400ADBFB6 /* YQKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FE0BD2102D66400ADBFB6 /* YQKitUITests.swift */; };
 		2F1FE0CE2102D70800ADBFB6 /* SlowlyShowTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FE0CD2102D70800ADBFB6 /* SlowlyShowTransition.swift */; };
 		2F1FE0D12102D7C800ADBFB6 /* SinglePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FE0D02102D7C800ADBFB6 /* SinglePickerController.swift */; };
+		2F73C5D12109E230004B5C2B /* SGFunctionRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F73C5CB2109E230004B5C2B /* SGFunctionRowView.m */; };
+		2F73C5D22109E230004B5C2B /* SGFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F73C5CC2109E230004B5C2B /* SGFunctionView.m */; };
+		2F73C5D32109E230004B5C2B /* SGFunctionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F73C5CD2109E230004B5C2B /* SGFunctionItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		2F1FE0BF2102D66400ADBFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F1FE0CD2102D70800ADBFB6 /* SlowlyShowTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowlyShowTransition.swift; sourceTree = "<group>"; };
 		2F1FE0D02102D7C800ADBFB6 /* SinglePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePickerController.swift; sourceTree = "<group>"; };
+		2F73C5CB2109E230004B5C2B /* SGFunctionRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFunctionRowView.m; sourceTree = "<group>"; };
+		2F73C5CC2109E230004B5C2B /* SGFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFunctionView.m; sourceTree = "<group>"; };
+		2F73C5CD2109E230004B5C2B /* SGFunctionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFunctionItem.m; sourceTree = "<group>"; };
+		2F73C5CE2109E230004B5C2B /* SGFunctionRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFunctionRowView.h; sourceTree = "<group>"; };
+		2F73C5CF2109E230004B5C2B /* SGFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFunctionView.h; sourceTree = "<group>"; };
+		2F73C5D02109E230004B5C2B /* SGFunctionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFunctionItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +142,7 @@
 		2F1FE0CB2102D67600ADBFB6 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2F73C5CA2109E230004B5C2B /* SGFunctionView */,
 				2F1FE0D22102E58300ADBFB6 /* Search */,
 				2F1FE0CF2102D7A200ADBFB6 /* Picker */,
 				2F1FE0CC2102D6A200ADBFB6 /* Transition */,
@@ -161,6 +171,19 @@
 			children = (
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		2F73C5CA2109E230004B5C2B /* SGFunctionView */ = {
+			isa = PBXGroup;
+			children = (
+				2F73C5CE2109E230004B5C2B /* SGFunctionRowView.h */,
+				2F73C5CB2109E230004B5C2B /* SGFunctionRowView.m */,
+				2F73C5CF2109E230004B5C2B /* SGFunctionView.h */,
+				2F73C5CC2109E230004B5C2B /* SGFunctionView.m */,
+				2F73C5D02109E230004B5C2B /* SGFunctionItem.h */,
+				2F73C5CD2109E230004B5C2B /* SGFunctionItem.m */,
+			);
+			path = SGFunctionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +317,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F73C5D12109E230004B5C2B /* SGFunctionRowView.m in Sources */,
 				2F1FE0CE2102D70800ADBFB6 /* SlowlyShowTransition.swift in Sources */,
+				2F73C5D22109E230004B5C2B /* SGFunctionView.m in Sources */,
+				2F73C5D32109E230004B5C2B /* SGFunctionItem.m in Sources */,
 				2F1FE0A02102D66300ADBFB6 /* ViewController.swift in Sources */,
 				2F1FE09E2102D66300ADBFB6 /* AppDelegate.swift in Sources */,
 				2F1FE0D12102D7C800ADBFB6 /* SinglePickerController.swift in Sources */,
