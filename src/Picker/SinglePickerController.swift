@@ -93,20 +93,8 @@ class SinglePickerController: UIViewController {
         }
     }
     
-    private func viewController(for respd: UIResponder) -> UIViewController? {
-        var responder: UIResponder? = respd
-        while responder != nil {
-            if let vc = responder as? UIViewController {
-                return vc
-            } else {
-                responder = responder?.next
-            }
-        }
-        return nil
-    }
-    
     func showPickerView(for responder: UIResponder) {
-        viewController(for: responder)?.present(self, animated: true, completion: nil)
+        responder.recentlyViewController?.present(self, animated: true, completion: nil)
     }
 }
 

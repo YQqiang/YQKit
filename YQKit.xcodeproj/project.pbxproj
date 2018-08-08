@@ -19,6 +19,7 @@
 		2F73C5D12109E230004B5C2B /* SGFunctionRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F73C5CB2109E230004B5C2B /* SGFunctionRowView.m */; };
 		2F73C5D22109E230004B5C2B /* SGFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F73C5CC2109E230004B5C2B /* SGFunctionView.m */; };
 		2F73C5D32109E230004B5C2B /* SGFunctionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F73C5CD2109E230004B5C2B /* SGFunctionItem.m */; };
+		2FAE34BF211A7B7500A63291 /* UIResponder(YQ).swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE34BE211A7B7500A63291 /* UIResponder(YQ).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		2F73C5CE2109E230004B5C2B /* SGFunctionRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFunctionRowView.h; sourceTree = "<group>"; };
 		2F73C5CF2109E230004B5C2B /* SGFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFunctionView.h; sourceTree = "<group>"; };
 		2F73C5D02109E230004B5C2B /* SGFunctionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFunctionItem.h; sourceTree = "<group>"; };
+		2FAE34BE211A7B7500A63291 /* UIResponder(YQ).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder(YQ).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		2F1FE0CB2102D67600ADBFB6 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2FAE34BD211A7B4100A63291 /* Extension */,
 				2F73C5CA2109E230004B5C2B /* SGFunctionView */,
 				2F1FE0D22102E58300ADBFB6 /* Search */,
 				2F1FE0CF2102D7A200ADBFB6 /* Picker */,
@@ -184,6 +187,14 @@
 				2F73C5CD2109E230004B5C2B /* SGFunctionItem.m */,
 			);
 			path = SGFunctionView;
+			sourceTree = "<group>";
+		};
+		2FAE34BD211A7B4100A63291 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2FAE34BE211A7B7500A63291 /* UIResponder(YQ).swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F73C5D12109E230004B5C2B /* SGFunctionRowView.m in Sources */,
+				2FAE34BF211A7B7500A63291 /* UIResponder(YQ).swift in Sources */,
 				2F1FE0CE2102D70800ADBFB6 /* SlowlyShowTransition.swift in Sources */,
 				2F73C5D22109E230004B5C2B /* SGFunctionView.m in Sources */,
 				2F73C5D32109E230004B5C2B /* SGFunctionItem.m in Sources */,

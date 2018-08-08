@@ -30,7 +30,5 @@ class ViewController: UIViewController {
         pickerVC.singlePickerView.confirmBtn.setTitleColor(UIColor.green, for: .normal)
         pickerVC.showPickerView(for: self)
     }
-
-
 }
 
